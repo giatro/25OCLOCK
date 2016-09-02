@@ -1,0 +1,75 @@
+{
+    "author": "gianluca.troiani@gmail.com",
+    "dependencies": {},
+    "keywords": [],
+    "name": "25-o-clock",
+    "pebble": {
+        "capabilities": [
+            "configurable"
+        ],
+        "displayName": "25 o'clock",
+        "enableMultiJS": false,
+        "messageKeys": {
+            "KEY_BG_COLOR_BLUE": 2,
+            "KEY_BG_COLOR_GREEN": 1,
+            "KEY_BG_COLOR_RED": 0,
+            "KEY_ND_COLOR_BLUE": 8,
+            "KEY_ND_COLOR_GREEN": 7,
+            "KEY_ND_COLOR_RED": 6,
+            "KEY_RANDOM": 9,
+            "KEY_ST_COLOR_BLUE": 5,
+            "KEY_ST_COLOR_GREEN": 4,
+            "KEY_ST_COLOR_RED": 3
+        },
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "file": "fonts/orbitron-medium.otf",
+                    "name": "FONT_ORBITRON_24",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "fonts/SciFly-Sans.ttf",
+                    "name": "FONT_SCIFLY_30",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "fonts/org_01.ttf",
+                    "name": "FONT_ORG_33",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "fonts/SINNER__.TTF",
+                    "name": "FONT_SINNER_30",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "fonts/BlackOpsOne-Regular.ttf",
+                    "name": "FONT_OPS_30",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "images/grid_logo.png",
+                    "menuIcon": true,
+                    "name": "LOGO",
+                    "type": "bitmap"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "basalt"
+        ],
+        "uuid": "00ea1f0b-e1a9-41a4-adc9-86cbe6235b3b",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "1.0.0"
+}
