@@ -39,6 +39,17 @@
             <input id='submit_button' type='button' class='item-button' value='SUBMIT'>
         </div>
     </div>
+    <div class='item-container'>
+    <label class="item">
+        Font
+        <select id="font_index" class="item-select">
+            <option class="item-select-option" value="0">BlackOpsOne</option>
+            <option class="item-select-option" value="1">Orbitron</option>
+            <option class="item-select-option" value="2">SciFly</option>
+            <option class="item-select-option" value="3">Sinner</option>
+        </select>
+    </div>
+    </label>
 </body>
 <script>
 function getConfigData() {
@@ -46,11 +57,13 @@ function getConfigData() {
     var firstForegroundColorPicker = document.getElementById('first_foreground_color_picker');
     var secondForegroundColorPicker = document.getElementById('second_foreground_color_picker');
     var randomCheckbox = document.getElementById('random_checkbox');
+    var fontIndex = document.getElementById('font_index');    
 
     var options = {
         'background_color': backgroundColorPicker.value,
         'first_foreground_color': firstForegroundColorPicker.value,
         'second_foreground_color': secondForegroundColorPicker.value,
+        'font_index': fontIndex.value,
         'random_checkbox': randomCheckbox.checked
     };
 
@@ -58,6 +71,7 @@ function getConfigData() {
     localStorage['background_color'] = options['background_color'];
     localStorage['first_foreground_color'] = options['first_foreground_color'];
     localStorage['second_foreground_color'] = options['second_foreground_color'];
+    localStorage['font_index'] = options['font_index'];
     localStorage['random'] = options['random_checkbox'];
 
     console.log('Got options: ' + JSON.stringify(options));
@@ -90,12 +104,14 @@ submitButton.addEventListener('click', function() {
     var firstForegroundColorPicker = document.getElementById('first_foreground_color_picker');
     var secondForegroundColorPicker = document.getElementById('second_foreground_color_picker');
     var randomCheckbox = document.getElementById('random_checkbox');
+    var fontIndex = document.getElementById('fontIndex');
 
     // Load any previously saved configuration, if available
     if (localStorage['background_color']) {
         backgroundColorPicker.value = localStorage['background_color'];
         firstForegroundColorPicker.value = localStorage['first_foreground_color'];
         secondForegroundColorPicker.value = localStorage['second_foreground_color'];
+        fontIndex.value = localStorage['font_index'];
         randomCheckbox.checked = JSON.parse(localStorage['random']);
     }
 })();
