@@ -20,6 +20,7 @@
                     <option class="item-select-option" value="3">Sinner</option>
                     <option class="item-select-option" value="4">Square</option>
                     <option class="item-select-option" value="5">Hyperspace</option>
+                    <option class="item-select-option" value="6">Imagine</option>
                 </select>
             </label>
         </div>
@@ -110,7 +111,9 @@ submitButton.addEventListener('click', function() {
         backgroundColorPicker.value = localStorage['background_color'];
         firstForegroundColorPicker.value = localStorage['first_foreground_color'];
         secondForegroundColorPicker.value = localStorage['second_foreground_color'];
-        fontIndex.value = localStorage['font_index'];
+        if(localStorage['font_index']) {
+            fontIndex.value = localStorage['font_index'];
+        }
         randomCheckbox.checked = JSON.parse(localStorage['random']);
     }
 })();
