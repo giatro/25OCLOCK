@@ -13,6 +13,7 @@
             "KEY_BG_COLOR_BLUE": 2,
             "KEY_BG_COLOR_GREEN": 1,
             "KEY_BG_COLOR_RED": 0,
+            "KEY_FONT_INDEX": 10,
             "KEY_ND_COLOR_BLUE": 8,
             "KEY_ND_COLOR_GREEN": 7,
             "KEY_ND_COLOR_RED": 6,
@@ -25,20 +26,20 @@
         "resources": {
             "media": [
                 {
-                    "file": "fonts/orbitron-medium.otf",
-                    "name": "FONT_ORBITRON_24",
+                    "file": "fonts/Twode.no.ttf",
+                    "name": "FONT_TWODE_30",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "fonts/Hyperspace Bold.otf",
+                    "name": "FONT_HYPERSPACE_30",
                     "targetPlatforms": null,
                     "type": "font"
                 },
                 {
                     "file": "fonts/SciFly-Sans.ttf",
                     "name": "FONT_SCIFLY_30",
-                    "targetPlatforms": null,
-                    "type": "font"
-                },
-                {
-                    "file": "fonts/org_01.ttf",
-                    "name": "FONT_ORG_33",
                     "targetPlatforms": null,
                     "type": "font"
                 },
@@ -64,7 +65,9 @@
         },
         "sdkVersion": "3",
         "targetPlatforms": [
-            "basalt"
+            "aplite",
+            "basalt",
+            "diorite"
         ],
         "uuid": "00ea1f0b-e1a9-41a4-adc9-86cbe6235b3b",
         "watchapp": {
