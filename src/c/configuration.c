@@ -3,7 +3,7 @@
 
 const int fonts[] = {
   RESOURCE_ID_FONT_SCIFLY_30, // http://www.dafont.com/it/scifly.font
-  RESOURCE_ID_FONT_OCTAGONAL_30, //
+  RESOURCE_ID_FONT_RABBIT_30,
   RESOURCE_ID_FONT_SINNER_30, // http://www.dafont.com/sinner.font
   RESOURCE_ID_FONT_TWODE_30,
 };

@@ -37,7 +37,7 @@ static void init() {
   int boundh = (int)bounds.size.h - 3;
   for(int i = 0; i<5; i++){
     for(int j = 0; j<5; j++){
-      time_layer[i*5+j] = text_layer_create(GRect(j*boundw/5+2, i*boundh/5+1, boundw/5+2, boundh/5+1));
+      time_layer[i*5+j] = text_layer_create(GRect(j*boundw/5+2, i*boundh/5-1, boundw/5, boundh/5));
       text_layer_set_text_color(time_layer[i*5+j], textcolor);
       text_layer_set_font(time_layer[i*5+j], time_font);
       text_layer_set_text_alignment(time_layer[i*5+j], GTextAlignmentCenter);

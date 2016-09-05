@@ -26,8 +26,14 @@
         "resources": {
             "media": [
                 {
-                    "file": "fonts/octab-017.ttf",
-                    "name": "FONT_OCTAGONAL_30",
+                    "file": "fonts/whitrabt.ttf",
+                    "name": "FONT_RABBIT_30",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "fonts/oblivious-font.regular.ttf",
+                    "name": "FONT_OLIVIOUS_32",
                     "targetPlatforms": null,
                     "type": "font"
                 },
