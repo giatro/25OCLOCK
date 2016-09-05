@@ -26,14 +26,14 @@
         "resources": {
             "media": [
                 {
-                    "file": "fonts/Twode.no.ttf",
-                    "name": "FONT_TWODE_30",
+                    "file": "fonts/octab-017.ttf",
+                    "name": "FONT_OCTAGONAL_30",
                     "targetPlatforms": null,
                     "type": "font"
                 },
                 {
-                    "file": "fonts/Hyperspace Bold.otf",
-                    "name": "FONT_HYPERSPACE_30",
+                    "file": "fonts/Twode.no.ttf",
+                    "name": "FONT_TWODE_30",
                     "targetPlatforms": null,
                     "type": "font"
                 },
@@ -46,12 +46,6 @@
                 {
                     "file": "fonts/SINNER__.TTF",
                     "name": "FONT_SINNER_30",
-                    "targetPlatforms": null,
-                    "type": "font"
-                },
-                {
-                    "file": "fonts/BlackOpsOne-Regular.ttf",
-                    "name": "FONT_OPS_30",
                     "targetPlatforms": null,
                     "type": "font"
                 },

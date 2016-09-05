@@ -7,14 +7,13 @@ static void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed) {
   draw_time();
 }
 
-static void handle_bluetooth(bool connected) {
+void handle_bluetooth(bool connected) {
   vibes_enqueue_custom_pattern(pat);
   draw_time();
 }
 
 static void init() {
   time_font = fonts_load_custom_font(resource_get_handle(fonts[0]));
-  APP_LOG(APP_LOG_LEVEL_INFO, "INIT");
   connection_service_subscribe((ConnectionHandlers) {
     .pebble_app_connection_handler = handle_bluetooth
   });

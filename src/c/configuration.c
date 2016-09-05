@@ -3,9 +3,8 @@
 
 const int fonts[] = {
   RESOURCE_ID_FONT_SCIFLY_30, // http://www.dafont.com/it/scifly.font
-  RESOURCE_ID_FONT_OPS_30, // http://www.1001freefonts.com/black_ops_one.font
+  RESOURCE_ID_FONT_OCTAGONAL_30, //
   RESOURCE_ID_FONT_SINNER_30, // http://www.dafont.com/sinner.font
-  RESOURCE_ID_FONT_HYPERSPACE_30,
   RESOURCE_ID_FONT_TWODE_30,
 };
 
@@ -23,6 +22,7 @@ void set_style() {
   int random = 0;
   if(persist_exists(KEY_FONT_INDEX)) {
     fontindex = persist_read_int(KEY_FONT_INDEX);
+    time_font = fonts_load_custom_font(resource_get_handle(fonts[fontindex]));
   }
   #ifdef PBL_COLOR
   if(persist_exists(KEY_ST_COLOR_RED)) {
