@@ -28,11 +28,11 @@
                 <label class="item">
                     1st row
                     <select id="layout_row_0" class="item-select">
-                        <option class="item-select-option" value="1000" selected>Time (12:34)</option>
+                        <option class="item-select-option" value="1000">Time (12:34)</option>
                         <option class="item-select-option" value="1001">Day date (SUN01)</option>
                         <option class="item-select-option" value="1002">Month date (DEC01)</option>
                         <option class="item-select-option" value="1003">Month (DECEM)</option>
-                        <option class="item-select-option" value="1004">Battery</option>
+                        <option class="item-select-option" value="1004" selected>Battery</option>
                         <option class="item-select-option" value="1005">Steps</option>
                     </select>
                 </label>
@@ -54,8 +54,8 @@
                 <label class="item">
                     3rd row
                     <select id="layout_row_2" class="item-select">
-                        <option class="item-select-option" value="1000" selected>Time (12:34)</option>
-                        <option class="item-select-option" value="1001">Day date (SUN01)</option>
+                        <option class="item-select-option" value="1000">Time (12:34)</option>
+                        <option class="item-select-option" value="1001" selected>Day date (SUN01)</option>
                         <option class="item-select-option" value="1002">Month date (DEC01)</option>
                         <option class="item-select-option" value="1003">Month (DECEM)</option>
                         <option class="item-select-option" value="1004">Battery</option>
@@ -67,10 +67,10 @@
                 <label class="item">
                     4th row
                     <select id="layout_row_3" class="item-select">
-                        <option class="item-select-option" value="1000" selected>Time (12:34)</option>
+                        <option class="item-select-option" value="1000">Time (12:34)</option>
                         <option class="item-select-option" value="1001">Day date (SUN01)</option>
                         <option class="item-select-option" value="1002">Month date (DEC01)</option>
-                        <option class="item-select-option" value="1003">Month (DECEM)</option>
+                        <option class="item-select-option" value="1003" selected>Month (DECEM)</option>
                         <option class="item-select-option" value="1004">Battery</option>
                         <option class="item-select-option" value="1005">Steps</option>
                     </select>
@@ -80,12 +80,12 @@
                 <label class="item">
                     5th row
                     <select id="layout_row_4" class="item-select">
-                        <option class="item-select-option" value="1000" selected>Time (12:34)</option>
+                        <option class="item-select-option" value="1000">Time (12:34)</option>
                         <option class="item-select-option" value="1001">Day date (SUN01)</option>
                         <option class="item-select-option" value="1002">Month date (DEC01)</option>
                         <option class="item-select-option" value="1003">Month (DECEM)</option>
                         <option class="item-select-option" value="1004">Battery</option>
-                        <option class="item-select-option" value="1005">Steps</option>
+                        <option class="item-select-option" value="1005" selected>Steps</option>
                     </select>
                 </label>
             </div>
@@ -200,11 +200,21 @@ submitButton.addEventListener('click', function() {
         if(localStorage['font_index'] && localStorage['font_index'] < 4) {
             fontIndex.value = localStorage['font_index'];
         }
-        layoutRow0.value = localStorage['layout_row_0'];
-        layoutRow1.value = localStorage['layout_row_1'];
-        layoutRow2.value = localStorage['layout_row_2'];
-        layoutRow3.value = localStorage['layout_row_3'];
-        layoutRow4.value = localStorage['layout_row_4'];
+        if(localStorage['layout_row_0'] !== undefined) {
+            layoutRow0.value = localStorage['layout_row_0'];
+        }
+        if(localStorage['layout_row_1'] !== undefined) {
+            layoutRow1.value = localStorage['layout_row_1'];
+        }
+        if(localStorage['layout_row_2'] !== undefined) {
+            layoutRow2.value = localStorage['layout_row_2'];
+        }
+        if(localStorage['layout_row_3'] !== undefined) {
+            layoutRow3.value = localStorage['layout_row_3'];
+        }
+        if(localStorage['layout_row_4'] !== undefined) {
+            layoutRow4.value = localStorage['layout_row_4'];
+        }
         randomCheckbox.checked = JSON.parse(localStorage['random']);
     }
 })();
