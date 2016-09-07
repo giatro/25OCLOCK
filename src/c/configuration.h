@@ -13,6 +13,19 @@
 #define KEY_ND_COLOR_BLUE 8
 #define KEY_RANDOM 9
 #define KEY_FONT_INDEX 10
+#define KEY_LAYOUT_ROW_0 11
+#define KEY_LAYOUT_ROW_1 12
+#define KEY_LAYOUT_ROW_2 13
+#define KEY_LAYOUT_ROW_3 14
+#define KEY_LAYOUT_ROW_4 15
+
+#define ROW_CURRENT_TIME 1000
+#define ROW_DAY_DATE 1001
+#define ROW_MONTH_DATE 1002
+#define ROW_MONTH 1003
+#define ROW_BATTERY 1004
+#define ROW_STEPS 1005
+#define ROW_YEAR 1006
 
 bool change;
 GColor textcolor;
@@ -31,6 +44,9 @@ void outbox_failed_callback(DictionaryIterator *iterator, AppMessageResult reaso
 void outbox_sent_callback(DictionaryIterator *iterator, void *context);
 
 extern const int fonts[];
+
+int layout[5];
+
 
 extern uint32_t const segments[];
 VibePattern pat;

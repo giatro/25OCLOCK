@@ -1,6 +1,8 @@
 #include <pebble.h>
 #include "configuration.h"
 #include "draw.h"
+#include "healt.h"
+#include "battery.h"
 
 static void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed) {
   set_style();
@@ -51,6 +53,7 @@ static void init() {
   
   draw_time();
   set_style();
+  //battery_init();
   
   tick_timer_service_subscribe(MINUTE_UNIT, handle_minute_tick);
 }

@@ -5,7 +5,8 @@
     "name": "25-o-clock",
     "pebble": {
         "capabilities": [
-            "configurable"
+            "configurable",
+            "health"
         ],
         "displayName": "25 o'clock",
         "enableMultiJS": false,
@@ -14,6 +15,11 @@
             "KEY_BG_COLOR_GREEN": 1,
             "KEY_BG_COLOR_RED": 0,
             "KEY_FONT_INDEX": 10,
+            "KEY_LAYOUT_ROW_0": 11,
+            "KEY_LAYOUT_ROW_1": 12,
+            "KEY_LAYOUT_ROW_2": 13,
+            "KEY_LAYOUT_ROW_3": 14,
+            "KEY_LAYOUT_ROW_4": 15,
             "KEY_ND_COLOR_BLUE": 8,
             "KEY_ND_COLOR_GREEN": 7,
             "KEY_ND_COLOR_RED": 6,
