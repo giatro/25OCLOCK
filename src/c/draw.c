@@ -50,7 +50,7 @@ void draw_time(){
         strftime(textrows[rowindex], sizeof(textrows[rowindex]), "%B", tick_time);
         break;
       case ROW_YEAR:
-        strftime(textrows[rowindex], sizeof(textrows[rowindex]), "W%Y", tick_time);
+        strftime(textrows[rowindex], sizeof(textrows[rowindex]), "Y%Y", tick_time);
         break;
       case ROW_BATTERY:
         snprintf(textrows[rowindex], sizeof(textrows[rowindex]), "%04d%%", get_battery_charge_percent());
