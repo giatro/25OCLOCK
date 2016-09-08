@@ -3,10 +3,9 @@
 #include "draw.h"
 
 const int fonts[] = {
-  RESOURCE_ID_FONT_SCIFLY_30, // http://www.dafont.com/it/scifly.font
-  RESOURCE_ID_FONT_RABBIT_30,
-  RESOURCE_ID_FONT_SINNER_30, // http://www.dafont.com/sinner.font
-  RESOURCE_ID_FONT_TWODE_30,
+  RESOURCE_ID_FONT_RABBIT_36,
+  RESOURCE_ID_FONT_SCIFLY_32,
+  RESOURCE_ID_FONT_TELEGRAMA_36
 };
 
 int layout[5] = {ROW_BATTERY,ROW_CURRENT_TIME,ROW_DAY_DATE,ROW_MONTH_DATE,ROW_STEPS};

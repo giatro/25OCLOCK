@@ -32,32 +32,20 @@
         "resources": {
             "media": [
                 {
+                    "file": "fonts/telegrama_render.otf",
+                    "name": "FONT_TELEGRAMA_36",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
                     "file": "fonts/whitrabt.ttf",
-                    "name": "FONT_RABBIT_30",
-                    "targetPlatforms": null,
-                    "type": "font"
-                },
-                {
-                    "file": "fonts/oblivious-font.regular.ttf",
-                    "name": "FONT_OLIVIOUS_32",
-                    "targetPlatforms": null,
-                    "type": "font"
-                },
-                {
-                    "file": "fonts/Twode.no.ttf",
-                    "name": "FONT_TWODE_30",
+                    "name": "FONT_RABBIT_36",
                     "targetPlatforms": null,
                     "type": "font"
                 },
                 {
                     "file": "fonts/SciFly-Sans.ttf",
-                    "name": "FONT_SCIFLY_30",
-                    "targetPlatforms": null,
-                    "type": "font"
-                },
-                {
-                    "file": "fonts/SINNER__.TTF",
-                    "name": "FONT_SINNER_30",
+                    "name": "FONT_SCIFLY_32",
                     "targetPlatforms": null,
                     "type": "font"
                 },
