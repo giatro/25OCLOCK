@@ -32,28 +32,16 @@
         "resources": {
             "media": [
                 {
+                    "file": "fonts/telegrama_raw.otf",
+                    "name": "FONT_RAW_36",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
                     "file": "fonts/telegrama_render.otf",
-                    "name": "FONT_TELEGRAMA_36",
+                    "name": "FONT_RENDER_36",
                     "targetPlatforms": null,
                     "type": "font"
-                },
-                {
-                    "file": "fonts/whitrabt.ttf",
-                    "name": "FONT_RABBIT_36",
-                    "targetPlatforms": null,
-                    "type": "font"
-                },
-                {
-                    "file": "fonts/SciFly-Sans.ttf",
-                    "name": "FONT_SCIFLY_32",
-                    "targetPlatforms": null,
-                    "type": "font"
-                },
-                {
-                    "file": "images/grid_logo.png",
-                    "menuIcon": true,
-                    "name": "LOGO",
-                    "type": "bitmap"
                 }
             ]
         },

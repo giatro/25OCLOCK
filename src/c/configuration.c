@@ -3,9 +3,8 @@
 #include "draw.h"
 
 const int fonts[] = {
-  RESOURCE_ID_FONT_RABBIT_36,
-  RESOURCE_ID_FONT_SCIFLY_32,
-  RESOURCE_ID_FONT_TELEGRAMA_36
+  RESOURCE_ID_FONT_RENDER_36,
+  RESOURCE_ID_FONT_RAW_36
 };
 
 int layout[5] = {ROW_BATTERY,ROW_CURRENT_TIME,ROW_DAY_DATE,ROW_MONTH_DATE,ROW_STEPS};
@@ -60,6 +59,7 @@ void set_style() {
   #endif
   window_set_background_color(window, backgroundcolor);
   for(int i = 0; i<5; i++){
+    APP_LOG(APP_LOG_LEVEL_DEBUG, "Loop index now %d", layout[i] == ROW_CURRENT_TIME);
     change = !change;
     for(int j = 0; j<5; j++){
       text_layer_set_font(time_layer[i*5+j], time_font);
@@ -67,7 +67,7 @@ void set_style() {
         change = !change;
       }
       change = random ? rand() % 2 : false;
-      if (i==1 || change) {
+      if (layout[i] == ROW_CURRENT_TIME || change) {
         text_layer_set_text_color(time_layer[i*5+j], textaccentcolor);
       } else {
         text_layer_set_text_color(time_layer[i*5+j], textcolor);
