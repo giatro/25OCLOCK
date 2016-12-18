@@ -8,12 +8,11 @@ Pebble.addEventListener('showConfiguration', function() {
 
 Pebble.addEventListener('webviewclosed', function(e) {
   var configData = JSON.parse(decodeURIComponent(e.response));
-  console.log('Configuration page returned: ' + JSON.stringify(configData));
-
   var backgroundColor = configData['background_color'];
   var firstForegroundColor = configData['first_foreground_color'];
   var secondForegroundColor = configData['second_foreground_color'];
   var random = configData['random_checkbox'];
+  var bt = configData['bt_checkbox'];
   var fontIndex = configData['font_index'];
   var layoutRow0 = configData['layout_row_0'];
   var layoutRow1 = configData['layout_row_1'];
@@ -32,6 +31,7 @@ Pebble.addEventListener('webviewclosed', function(e) {
   dict['KEY_ND_COLOR_GREEN'] = parseInt(secondForegroundColor.substring(4, 6), 16);
   dict['KEY_ND_COLOR_BLUE'] = parseInt(secondForegroundColor.substring(6), 16);
   dict['KEY_RANDOM'] = random ? 1 : 0;
+  dict['KEY_BT'] = bt ? 1 : 0;
   dict['KEY_FONT_INDEX'] = parseInt(fontIndex);
   dict['KEY_LAYOUT_ROW_0'] = parseInt(layoutRow0);
   dict['KEY_LAYOUT_ROW_1'] = parseInt(layoutRow1);

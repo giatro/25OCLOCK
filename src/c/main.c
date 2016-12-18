@@ -10,8 +10,16 @@ static void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed) {
 }
 
 void handle_bluetooth(bool connected) {
-  vibes_enqueue_custom_pattern(pat);
-  draw_time();
+  APP_LOG(APP_LOG_LEVEL_DEBUG, "BT");
+  if(persist_exists(KEY_BT)) {
+    if(persist_read_int(KEY_BT)) {
+      APP_LOG(APP_LOG_LEVEL_DEBUG, "NOTIFYBT");
+      vibes_enqueue_custom_pattern(pat);
+      draw_time();  
+    } else {
+      APP_LOG(APP_LOG_LEVEL_DEBUG, "IGNOREBT");
+    };
+  }
 }
 
 static void init() {

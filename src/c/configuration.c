@@ -94,6 +94,7 @@ void inbox_received_callback(DictionaryIterator *iterator, void *context) {
   Tuple *layout_row_3 = dict_find(iterator, KEY_LAYOUT_ROW_3);
   Tuple *layout_row_4 = dict_find(iterator, KEY_LAYOUT_ROW_4);
   Tuple *random_t = dict_find(iterator, KEY_RANDOM);
+  Tuple *notifybt_t = dict_find(iterator, KEY_BT);
     
   if(color_st_red_t) {
     int fontindex  = font_index_t->value->int32;
@@ -110,16 +111,17 @@ void inbox_received_callback(DictionaryIterator *iterator, void *context) {
     persist_write_int(KEY_LAYOUT_ROW_3, layout[3]);
     persist_write_int(KEY_LAYOUT_ROW_4, layout[4]);
     #ifdef PBL_COLOR
-      int bgred   = color_bg_red_t->value->int32;
-      int bggreen = color_bg_green_t->value->int32;
-      int bgblue  = color_bg_blue_t->value->int32;
-      int stred   = color_st_red_t->value->int32;
-      int stgreen = color_st_green_t->value->int32;
-      int stblue  = color_st_blue_t->value->int32;
-      int ndred   = color_nd_red_t->value->int32;
-      int ndgreen = color_nd_green_t->value->int32;
-      int ndblue  = color_nd_blue_t->value->int32;
-      int random  = random_t->value->int32;;
+      int bgred     = color_bg_red_t->value->int32;
+      int bggreen   = color_bg_green_t->value->int32;
+      int bgblue    = color_bg_blue_t->value->int32;
+      int stred     = color_st_red_t->value->int32;
+      int stgreen   = color_st_green_t->value->int32;
+      int stblue    = color_st_blue_t->value->int32;
+      int ndred     = color_nd_red_t->value->int32;
+      int ndgreen   = color_nd_green_t->value->int32;
+      int ndblue    = color_nd_blue_t->value->int32;
+      int random    = random_t->value->int32;
+      int notifybt  = notifybt_t->value->int32;
       backgroundcolor = GColorFromRGB(bgred, bggreen, bgblue);
       textcolor = GColorFromRGB(stred, stgreen, stblue);
       textaccentcolor = GColorFromRGB(ndred, ndgreen, ndblue);
@@ -135,6 +137,7 @@ void inbox_received_callback(DictionaryIterator *iterator, void *context) {
       persist_write_int(KEY_ND_COLOR_GREEN, ndgreen);
       persist_write_int(KEY_ND_COLOR_BLUE, ndblue);
       persist_write_int(KEY_RANDOM, random);
+      persist_write_int(KEY_BT, notifybt);
     #endif
   }
   draw_time();

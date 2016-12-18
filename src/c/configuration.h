@@ -18,6 +18,7 @@
 #define KEY_LAYOUT_ROW_2 13
 #define KEY_LAYOUT_ROW_3 14
 #define KEY_LAYOUT_ROW_4 15
+#define KEY_BT 16
 
 #define ROW_CURRENT_TIME 1000
 #define ROW_DAY_DATE 1001

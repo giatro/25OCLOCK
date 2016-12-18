@@ -14,6 +14,7 @@
             "KEY_BG_COLOR_BLUE": 2,
             "KEY_BG_COLOR_GREEN": 1,
             "KEY_BG_COLOR_RED": 0,
+            "KEY_BT": 16,
             "KEY_FONT_INDEX": 10,
             "KEY_LAYOUT_ROW_0": 11,
             "KEY_LAYOUT_ROW_1": 12,
@@ -31,6 +32,13 @@
         "projectType": "native",
         "resources": {
             "media": [
+                {
+                    "file": "images/687474703a2f2f67696174726f2e6d (1).png",
+                    "menuIcon": true,
+                    "name": "ICO",
+                    "targetPlatforms": null,
+                    "type": "png"
+                },
                 {
                     "file": "fonts/telegrama_raw.otf",
                     "name": "FONT_RAW_36",
@@ -51,7 +59,7 @@
             "basalt",
             "diorite"
         ],
-        "uuid": "00ea1f0b-e1a9-41a4-adc9-86cbe6235b3b",
+        "uuid": "a8fcd72c-40e4-48d2-a31b-4ead1e5856dd",
         "watchapp": {
             "watchface": true
         }
